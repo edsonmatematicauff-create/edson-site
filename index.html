@@ -3,49 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Edson da Costa | Educação e Consciência</title>
+
+<title>Edson da Costa | Plataforma</title>
 
 <style>
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Arial;
+  background: #0b0f19;
   color: white;
 }
 
-/* FUNDO COM IMAGEM */
-header {
-  text-align: center;
-  padding: 120px 20px;
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  width: 230px;
+  height: 100%;
+  background: #020617;
+  padding: 20px;
+}
+
+.sidebar img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+.submenu {
+  margin-left: 15px;
+  display: none;
+}
+
+.sidebar .active + .submenu {
+  display: block;
+}
+
+/* MAIN */
+.main {
+  margin-left: 250px;
+}
+
+/* HEADER */
+.header {
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
-  url('https://images.unsplash.com/photo-1588072432836-e10032774350');
+  url('foto1.jpg');
   background-size: cover;
-  background-position: center;
+  padding: 100px 30px;
 }
 
-h1 {
-  font-size: 45px;
-}
-
-p {
-  font-size: 18px;
+.header h1 {
+  font-size: 50px;
 }
 
 .btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 15px 30px;
-  background: #22c55e;
-  color: white;
+  background: #facc15;
+  padding: 12px 25px;
+  color: black;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
-.section {
-  padding: 60px 20px;
-  text-align: center;
-  background: #020617;
-}
-
+/* CARDS */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -56,116 +81,163 @@ p {
   background: #1e293b;
   margin: 15px;
   padding: 25px;
-  border-radius: 15px;
-  width: 260px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-/* MNU */
-.mnu {
-  background: #111827;
-  padding: 40px 20px;
+  width: 250px;
+  border-radius: 10px;
   text-align: center;
-  border-top: 3px solid #22c55e;
+}
+
+/* TEXTO BRANCO NAS MATÉRIAS */
+.card h3 {
+  color: white;
+}
+
+/* CPOP */
+.cpop {
+  background: #020617;
+  padding: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cpop-box {
+  width: 40%;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* GALERIA */
+.galeria {
+  display: flex;
+}
+
+.galeria img {
+  width: 33%;
 }
 
 /* DEPOIMENTOS */
 .testimonial {
   background: #1e293b;
-  margin: 15px auto;
   padding: 20px;
-  border-radius: 10px;
+  margin: 15px auto;
   max-width: 600px;
-  font-style: italic;
+  border-radius: 10px;
 }
+
 </style>
+
+<script>
+function toggleMenu() {
+  var el = document.getElementById("submenu");
+  el.style.display = el.style.display === "block" ? "none" : "block";
+}
+</script>
+
 </head>
 
 <body>
 
-<header>
-  <h1>Professor Edson da Costa Silva</h1>
-  <p>Física • Matemática • Química</p>
-  <p>Educação como ferramenta de transformação social</p>
+<!-- MENU LATERAL -->
+<div class="sidebar">
 
-  <p><strong>Edson da Costa</strong> — ensino com consciência crítica e prática</p>
+<img src="mnu.png">
 
-  <a class="btn" href="https://wa.me/5521999622242">
-    📲 Agendar Aula
-  </a>
-</header>
+<a href="#">🏠 Início</a>
+<a href="#">📚 Conteúdos</a>
+<a href="#">🎥 Aulas</a>
+<a href="#">🧠 Exercícios</a>
 
-<section class="section">
-  <h2>📚 Plataforma de Estudos</h2>
+<a href="#" onclick="toggleMenu()">🎓 CPOP ▼</a>
 
-  <div class="cards">
-    <a href="fisica.html" class="card">
-      <h3>Física</h3>
-      <p>Aulas e exercícios</p>
-    </a>
+<div id="submenu" class="submenu">
+  <a href="#">Pré-vestibular Caxias</a>
+  <a href="#">Pré-vestibular Penha</a>
+</div>
 
-    <a href="matematica.html" class="card">
-      <h3>Matemática</h3>
-      <p>Conteúdos e prática</p>
-    </a>
+<a href="#">💬 Depoimentos</a>
+<a href="#">📞 Contato</a>
 
-    <a href="quimica.html" class="card">
-      <h3>Química</h3>
-      <p>Fundamentos e aplicações</p>
-    </a>
+</div>
 
-    <a href="exercicios.html" class="card">
-      <h3>Exercícios</h3>
-      <p>Treine com resolução</p>
-    </a>
-  </div>
-</section>
+<!-- CONTEÚDO -->
+<div class="main">
 
-<section class="mnu">
-  <h2>✊🏾 Educação e Luta Antirracista</h2>
-  <p>
-    Este espaço também se constrói a partir da atuação de Edson da Costa Silva
-    enquanto educador comprometido com a transformação social.
-  </p>
-
-  <p>
-    Inspirado na atuação do <strong>Movimento Negro Unificado (MNU)</strong>,
-    o ensino aqui é entendido como prática de liberdade, consciência e resistência.
-  </p>
-</section>
-
-<section class="section">
-  <h2>💬 Depoimentos de Alunos</h2>
-
-  <div class="testimonial">
-    “O professor Edson da Costa explica de um jeito que nunca vi antes. Passei a entender física de verdade.”
-    <br><br>— Aluno do ensino médio
-  </div>
-
-  <div class="testimonial">
-    “Com as aulas do Edson da Costa Silva consegui melhorar muito em matemática.”
-    <br><br>— Estudante pré-ENEM
-  </div>
-
-  <div class="testimonial">
-    “Didática simples, direta e eficiente. Recomendo muito.”
-    <br><br>— Responsável de aluno
-  </div>
-
-</section>
-
-<section class="section">
-  <h2>🚀 Comece agora</h2>
-  <p>Acesse os conteúdos ou entre em contato para aulas personalizadas</p>
+<div class="header">
+  <h1>Edson da Costa Silva</h1>
+  <p>Educação, consciência e transformação</p>
 
   <a class="btn" href="https://wa.me/5521999622242">
     Falar no WhatsApp
   </a>
+</div>
+
+<!-- ÁREAS -->
+<section class="cards">
+
+<div class="card">
+  <h3>Matemática</h3>
+  <p>Conteúdo direto e prático</p>
+</div>
+
+<div class="card">
+  <h3>Física</h3>
+  <p>Aprenda com exemplos reais</p>
+</div>
+
+<div class="card">
+  <h3>Química</h3>
+  <p>Conceitos simplificados</p>
+</div>
+
+<div class="card">
+  <h3>Exercícios</h3>
+  <p>Treine para o ENEM</p>
+</div>
+
 </section>
+
+<!-- CPOP -->
+<section class="cpop">
+
+<div class="cpop-box">
+  <h2>Pré-vestibular Caxias</h2>
+  <p>Aulas, simulados e acompanhamento</p>
+</div>
+
+<div class="cpop-box">
+  <h2>Pré-vestibular Penha</h2>
+  <p>Educação que transforma vidas</p>
+</div>
+
+</section>
+
+<!-- GALERIA -->
+<div class="galeria">
+  <img src="foto1.jpg">
+  <img src="foto2.jpg">
+  <img src="foto1.jpg">
+</div>
+
+<!-- DEPOIMENTOS -->
+<section>
+
+<h2 style="text-align:center;">Depoimentos</h2>
+
+<div class="testimonial">
+“Professor Edson da Costa explica de forma clara e objetiva.”
+</div>
+
+<div class="testimonial">
+“Aprendi matemática de verdade pela primeira vez.”
+</div>
+
+<div class="testimonial">
+“Mais que professor, referência.”
+</div>
+
+</section>
+
+</div>
 
 </body>
 </html>
