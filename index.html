@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plataforma de Estudos - Professor Edson</title>
+<title>Professor Edson | Plataforma de Estudos</title>
 
 <style>
 body {
@@ -15,20 +15,26 @@ body {
 
 header {
   text-align: center;
-  padding: 80px 20px;
+  padding: 100px 20px;
   background: linear-gradient(135deg, #0f172a, #1e293b);
 }
 
+h1 {
+  font-size: 40px;
+}
+
 .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
   background: #22c55e;
-  padding: 12px 25px;
-  border-radius: 8px;
-  text-decoration: none;
   color: white;
+  text-decoration: none;
+  border-radius: 10px;
 }
 
 .section {
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
@@ -41,96 +47,69 @@ header {
 .card {
   background: #1e293b;
   margin: 15px;
-  padding: 20px;
-  border-radius: 10px;
-  width: 280px;
+  padding: 25px;
+  border-radius: 15px;
+  width: 260px;
+  transition: 0.3s;
 }
 
-.exercise {
-  background: #0f172a;
-  padding: 20px;
-  margin: 15px auto;
-  border-radius: 10px;
-  max-width: 600px;
+.card:hover {
+  transform: scale(1.05);
 }
 
-button {
-  margin-top: 10px;
-  padding: 10px;
-  background: #22c55e;
-  border: none;
+a.card-link {
+  text-decoration: none;
   color: white;
-  border-radius: 5px;
-  cursor: pointer;
 }
 </style>
-
-<script>
-function mostrarResposta(id) {
-  var el = document.getElementById(id);
-  el.style.display = "block";
-}
-</script>
-
 </head>
 
 <body>
 
 <header>
-  <h1>Plataforma de Estudos</h1>
-  <h2>Professor Edson da Costa Silva</h2>
+  <h1>Professor Edson</h1>
   <p>Física • Matemática • Química</p>
+  <p>Plataforma de estudos + aulas particulares</p>
 
   <a class="btn" href="https://wa.me/5521999622242">
-    📲 Tirar dúvida no WhatsApp
+    📲 Agendar Aula
   </a>
 </header>
 
 <section class="section">
-  <h2>📚 Conteúdos</h2>
+  <h2>📚 Acessar Conteúdos</h2>
 
   <div class="cards">
-    <div class="card">
-      <h3>Física</h3>
-      <p>Movimento uniforme, força, energia</p>
-    </div>
 
-    <div class="card">
-      <h3>Matemática</h3>
-      <p>Funções, equações, gráficos</p>
-    </div>
+    <a class="card-link" href="fisica.html">
+      <div class="card">
+        <h3>Física</h3>
+        <p>Aulas e exercícios</p>
+      </div>
+    </a>
 
-    <div class="card">
-      <h3>Química</h3>
-      <p>Átomo, ligações, transformações</p>
-    </div>
+    <a class="card-link" href="matematica.html">
+      <div class="card">
+        <h3>Matemática</h3>
+        <p>Funções e exercícios</p>
+      </div>
+    </a>
+
+    <a class="card-link" href="quimica.html">
+      <div class="card">
+        <h3>Química</h3>
+        <p>Conteúdos essenciais</p>
+      </div>
+    </a>
+
+    <a class="card-link" href="exercicios.html">
+      <div class="card">
+        <h3>Exercícios</h3>
+        <p>Treine e veja respostas</p>
+      </div>
+    </a>
+
   </div>
-</section>
-
-<section class="section">
-  <h2>🧠 Exercícios Resolvidos</h2>
-
-  <div class="exercise">
-    <p><b>1.</b> Um carro anda a 20 m/s por 10s. Qual a distância?</p>
-    <button onclick="mostrarResposta('r1')">Ver resposta</button>
-    <p id="r1" style="display:none;">Distância = 20 × 10 = 200 metros</p>
-  </div>
-
-  <div class="exercise">
-    <p><b>2.</b> Resolva: 2x + 4 = 10</p>
-    <button onclick="mostrarResposta('r2')">Ver resposta</button>
-    <p id="r2" style="display:none;">2x = 6 → x = 3</p>
-  </div>
-
-</section>
-
-<section class="section">
-  <h2>🚀 Evolua nos estudos</h2>
-  <p>Estude teoria + pratique exercícios + tire dúvidas direto comigo.</p>
-
-  <a class="btn" href="https://wa.me/5521999622242">
-    Começar agora
-  </a>
 </section>
 
 </body>
