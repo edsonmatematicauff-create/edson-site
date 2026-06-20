@@ -3,24 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Professor Edson | Plataforma de Estudos</title>
+<title>Edson da Costa | Educação e Consciência</title>
 
 <style>
 body {
   margin: 0;
-  font-family: Arial;
-  background: #020617;
+  font-family: Arial, sans-serif;
   color: white;
 }
 
+/* FUNDO COM IMAGEM */
 header {
   text-align: center;
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+  padding: 120px 20px;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+  url('https://images.unsplash.com/photo-1588072432836-e10032774350');
+  background-size: cover;
+  background-position: center;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 45px;
+}
+
+p {
+  font-size: 18px;
 }
 
 .btn {
@@ -36,6 +43,7 @@ h1 {
 .section {
   padding: 60px 20px;
   text-align: center;
+  background: #020617;
 }
 
 .cards {
@@ -57,9 +65,22 @@ h1 {
   transform: scale(1.05);
 }
 
-a.card-link {
-  text-decoration: none;
-  color: white;
+/* MNU */
+.mnu {
+  background: #111827;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 3px solid #22c55e;
+}
+
+/* DEPOIMENTOS */
+.testimonial {
+  background: #1e293b;
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  font-style: italic;
 }
 </style>
 </head>
@@ -67,9 +88,11 @@ a.card-link {
 <body>
 
 <header>
-  <h1>Professor Edson</h1>
+  <h1>Professor Edson da Costa Silva</h1>
   <p>Física • Matemática • Química</p>
-  <p>Plataforma de estudos + aulas particulares</p>
+  <p>Educação como ferramenta de transformação social</p>
+
+  <p><strong>Edson da Costa</strong> — ensino com consciência crítica e prática</p>
 
   <a class="btn" href="https://wa.me/5521999622242">
     📲 Agendar Aula
@@ -77,39 +100,71 @@ a.card-link {
 </header>
 
 <section class="section">
-  <h2>📚 Acessar Conteúdos</h2>
+  <h2>📚 Plataforma de Estudos</h2>
 
   <div class="cards">
-
-    <a class="card-link" href="fisica.html">
-      <div class="card">
-        <h3>Física</h3>
-        <p>Aulas e exercícios</p>
-      </div>
+    <a href="fisica.html" class="card">
+      <h3>Física</h3>
+      <p>Aulas e exercícios</p>
     </a>
 
-    <a class="card-link" href="matematica.html">
-      <div class="card">
-        <h3>Matemática</h3>
-        <p>Funções e exercícios</p>
-      </div>
+    <a href="matematica.html" class="card">
+      <h3>Matemática</h3>
+      <p>Conteúdos e prática</p>
     </a>
 
-    <a class="card-link" href="quimica.html">
-      <div class="card">
-        <h3>Química</h3>
-        <p>Conteúdos essenciais</p>
-      </div>
+    <a href="quimica.html" class="card">
+      <h3>Química</h3>
+      <p>Fundamentos e aplicações</p>
     </a>
 
-    <a class="card-link" href="exercicios.html">
-      <div class="card">
-        <h3>Exercícios</h3>
-        <p>Treine e veja respostas</p>
-      </div>
+    <a href="exercicios.html" class="card">
+      <h3>Exercícios</h3>
+      <p>Treine com resolução</p>
     </a>
-
   </div>
+</section>
+
+<section class="mnu">
+  <h2>✊🏾 Educação e Luta Antirracista</h2>
+  <p>
+    Este espaço também se constrói a partir da atuação de Edson da Costa Silva
+    enquanto educador comprometido com a transformação social.
+  </p>
+
+  <p>
+    Inspirado na atuação do <strong>Movimento Negro Unificado (MNU)</strong>,
+    o ensino aqui é entendido como prática de liberdade, consciência e resistência.
+  </p>
+</section>
+
+<section class="section">
+  <h2>💬 Depoimentos de Alunos</h2>
+
+  <div class="testimonial">
+    “O professor Edson da Costa explica de um jeito que nunca vi antes. Passei a entender física de verdade.”
+    <br><br>— Aluno do ensino médio
+  </div>
+
+  <div class="testimonial">
+    “Com as aulas do Edson da Costa Silva consegui melhorar muito em matemática.”
+    <br><br>— Estudante pré-ENEM
+  </div>
+
+  <div class="testimonial">
+    “Didática simples, direta e eficiente. Recomendo muito.”
+    <br><br>— Responsável de aluno
+  </div>
+
+</section>
+
+<section class="section">
+  <h2>🚀 Comece agora</h2>
+  <p>Acesse os conteúdos ou entre em contato para aulas personalizadas</p>
+
+  <a class="btn" href="https://wa.me/5521999622242">
+    Falar no WhatsApp
+  </a>
 </section>
 
 </body>
