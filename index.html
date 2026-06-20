@@ -3,141 +3,161 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Edson da Costa | Plataforma</title>
+<title>Edson da Costa</title>
 
 <style>
 
-body {
-  margin: 0;
-  font-family: Arial;
-  background: #0b0f19;
-  color: white;
+body{
+margin:0;
+font-family:Arial;
+background:#0b0f19;
+color:white;
 }
 
 /* SIDEBAR */
-.sidebar {
-  position: fixed;
-  width: 230px;
-  height: 100%;
-  background: #020617;
-  padding: 20px;
+.sidebar{
+position:fixed;
+width:230px;
+height:100%;
+background:#020617;
+padding:20px;
 }
 
-.sidebar img {
-  width: 80px;
-  margin-bottom: 20px;
+.sidebar img{
+width:90px;
+margin-bottom:20px;
 }
 
-.sidebar a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  margin: 15px 0;
-}
-
-.submenu {
-  margin-left: 15px;
-  display: none;
-}
-
-.sidebar .active + .submenu {
-  display: block;
+.sidebar a{
+display:block;
+color:white;
+text-decoration:none;
+margin:15px 0;
 }
 
 /* MAIN */
-.main {
-  margin-left: 250px;
+.main{
+margin-left:230px;
 }
 
-/* HEADER */
-.header {
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
-  url('foto1.jpg');
-  background-size: cover;
-  padding: 100px 30px;
+/* HERO */
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
+url('foto1.jpg');
+background-size:cover;
+display:flex;
+align-items:center;
+padding:40px;
 }
 
-.header h1 {
-  font-size: 50px;
+.hero h1{
+font-size:55px;
 }
 
-.btn {
-  background: #facc15;
-  padding: 12px 25px;
-  color: black;
-  text-decoration: none;
-  border-radius: 8px;
+.yellow{
+color:#facc15;
+}
+
+.btn{
+background:#facc15;
+padding:12px 25px;
+color:black;
+border-radius:8px;
+text-decoration:none;
 }
 
 /* CARDS */
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+padding:40px;
 }
 
-.card {
-  background: #1e293b;
-  margin: 15px;
-  padding: 25px;
-  width: 250px;
-  border-radius: 10px;
-  text-align: center;
+.card{
+background:#1e293b;
+margin:15px;
+padding:25px;
+width:240px;
+border-radius:12px;
+text-align:center;
+transition:0.3s;
 }
 
-/* TEXTO BRANCO NAS MATÉRIAS */
-.card h3 {
-  color: white;
+.card:hover{
+transform:scale(1.05);
+}
+
+.card button{
+margin-top:10px;
+background:#facc15;
+border:none;
+padding:10px;
+cursor:pointer;
 }
 
 /* CPOP */
-.cpop {
-  background: #020617;
-  padding: 50px;
-  display: flex;
-  justify-content: space-around;
+.cpop{
+background:#111827;
+margin:40px;
+padding:30px;
+border-radius:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-.cpop-box {
-  width: 40%;
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-/* GALERIA */
-.galeria {
-  display: flex;
-}
-
-.galeria img {
-  width: 33%;
+.cpop img{
+width:200px;
+border-radius:10px;
 }
 
 /* DEPOIMENTOS */
-.testimonial {
-  background: #1e293b;
-  padding: 20px;
-  margin: 15px auto;
-  max-width: 600px;
-  border-radius: 10px;
+.testimonials{
+padding:40px;
+text-align:center;
+}
+
+.test-box{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.test{
+background:#1e293b;
+padding:20px;
+margin:15px;
+border-radius:10px;
+width:280px;
+}
+
+.test img{
+width:60px;
+border-radius:50%;
+}
+
+/* SOBRE */
+.sobre{
+display:flex;
+align-items:center;
+padding:40px;
+background:#020617;
+}
+
+.sobre img{
+width:300px;
+border-radius:10px;
+margin-right:30px;
 }
 
 </style>
-
-<script>
-function toggleMenu() {
-  var el = document.getElementById("submenu");
-  el.style.display = el.style.display === "block" ? "none" : "block";
-}
-</script>
-
 </head>
 
 <body>
 
-<!-- MENU LATERAL -->
+<!-- SIDEBAR -->
 <div class="sidebar">
 
 <img src="mnu.png">
@@ -147,92 +167,112 @@ function toggleMenu() {
 <a href="#">🎥 Aulas</a>
 <a href="#">🧠 Exercícios</a>
 
-<a href="#" onclick="toggleMenu()">🎓 CPOP ▼</a>
-
-<div id="submenu" class="submenu">
-  <a href="#">Pré-vestibular Caxias</a>
-  <a href="#">Pré-vestibular Penha</a>
-</div>
-
+<a href="#">🎓 CPOP</a>
 <a href="#">💬 Depoimentos</a>
 <a href="#">📞 Contato</a>
 
 </div>
 
-<!-- CONTEÚDO -->
 <div class="main">
 
-<div class="header">
-  <h1>Edson da Costa Silva</h1>
-  <p>Educação, consciência e transformação</p>
+<!-- HERO -->
+<div class="hero">
+<div>
+<h1>
+Professor<br>
+Edson da Costa <span class="yellow">Silva</span><br>
+<span class="yellow">Edson da Costa</span>
+</h1>
 
-  <a class="btn" href="https://wa.me/5521999622242">
-    Falar no WhatsApp
-  </a>
+<p>FÍSICA • MATEMÁTICA • QUÍMICA</p>
+
+<p><i>Educação que <span class="yellow">liberta</span> e transforma realidades</i></p>
+
+<a class="btn" href="https://wa.me/5521999622242">Agendar aula</a>
+</div>
 </div>
 
-<!-- ÁREAS -->
+<!-- CARDS -->
 <section class="cards">
 
 <div class="card">
-  <h3>Matemática</h3>
-  <p>Conteúdo direto e prático</p>
+<h3>Física</h3>
+<p>Conceitos e exercícios</p>
+<button>Acessar</button>
 </div>
 
 <div class="card">
-  <h3>Física</h3>
-  <p>Aprenda com exemplos reais</p>
+<h3>Matemática</h3>
+<p>Prática e lógica</p>
+<button>Acessar</button>
 </div>
 
 <div class="card">
-  <h3>Química</h3>
-  <p>Conceitos simplificados</p>
+<h3>Química</h3>
+<p>Transformações e reações</p>
+<button>Acessar</button>
 </div>
 
 <div class="card">
-  <h3>Exercícios</h3>
-  <p>Treine para o ENEM</p>
+<h3>Exercícios</h3>
+<p>Treine para o ENEM</p>
+<button>Acessar</button>
 </div>
 
 </section>
 
 <!-- CPOP -->
-<section class="cpop">
+<div class="cpop">
 
-<div class="cpop-box">
-  <h2>Pré-vestibular Caxias</h2>
-  <p>Aulas, simulados e acompanhamento</p>
+<div>
+<h2>CPOP – Curso Popular Ouro Preto</h2>
+<p>Pré-vestibulares comunitários</p>
+
+<button>Pré-vestibular Caxias</button>
+<button>Pré-vestibular Penha</button>
 </div>
 
-<div class="cpop-box">
-  <h2>Pré-vestibular Penha</h2>
-  <p>Educação que transforma vidas</p>
+<img src="foto2.jpg">
+
+</div>
+
+<!-- DEPOIMENTOS -->
+<section class="testimonials">
+
+<h2>Depoimentos</h2>
+
+<div class="test-box">
+
+<div class="test">
+<img src="foto2.jpg">
+<p>“Aprendi matemática de verdade”</p>
+</div>
+
+<div class="test">
+<img src="foto2.jpg">
+<p>“Didática incrível”</p>
+</div>
+
+<div class="test">
+<img src="foto2.jpg">
+<p>“Professor referência”</p>
+</div>
+
 </div>
 
 </section>
 
-<!-- GALERIA -->
-<div class="galeria">
-  <img src="foto1.jpg">
-  <img src="foto2.jpg">
-  <img src="foto1.jpg">
-</div>
+<!-- SOBRE -->
+<section class="sobre">
 
-<!-- DEPOIMENTOS -->
-<section>
+<img src="foto1.jpg">
 
-<h2 style="text-align:center;">Depoimentos</h2>
-
-<div class="testimonial">
-“Professor Edson da Costa explica de forma clara e objetiva.”
-</div>
-
-<div class="testimonial">
-“Aprendi matemática de verdade pela primeira vez.”
-</div>
-
-<div class="testimonial">
-“Mais que professor, referência.”
+<div>
+<h2>Sobre o Professor</h2>
+<p>
+Edson da Costa Silva (Edson da Costa) é professor de Física, Matemática e Química,
+atuante no MNU e no pré-vestibular popular.
+</p>
 </div>
 
 </section>
