@@ -3,50 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Professor Edson | Física, Matemática e Química</title>
+<title>Plataforma de Estudos - Professor Edson</title>
 
 <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(180deg, #020617, #0f172a);
+  font-family: Arial;
+  background: #020617;
   color: white;
 }
 
 header {
   text-align: center;
-  padding: 100px 20px 60px;
+  padding: 80px 20px;
   background: linear-gradient(135deg, #0f172a, #1e293b);
 }
 
-h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 18px;
-  opacity: 0.9;
-}
-
 .btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 15px 30px;
   background: #22c55e;
-  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
   text-decoration: none;
-  border-radius: 10px;
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #16a34a;
+  color: white;
 }
 
 .section {
-  padding: 60px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
@@ -59,121 +41,97 @@ p {
 .card {
   background: #1e293b;
   margin: 15px;
-  padding: 25px;
-  border-radius: 15px;
+  padding: 20px;
+  border-radius: 10px;
   width: 280px;
-  transition: 0.3s;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
 
-.card:hover {
-  transform: scale(1.05);
+.exercise {
+  background: #0f172a;
+  padding: 20px;
+  margin: 15px auto;
+  border-radius: 10px;
+  max-width: 600px;
 }
 
-footer {
-  text-align: center;
-  padding: 30px;
-  background: #020617;
+button {
+  margin-top: 10px;
+  padding: 10px;
+  background: #22c55e;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
 }
 </style>
+
+<script>
+function mostrarResposta(id) {
+  var el = document.getElementById(id);
+  el.style.display = "block";
+}
+</script>
+
 </head>
 
 <body>
 
 <header>
-  <h1>Professor Edson da Costa Silva</h1>
+  <h1>Plataforma de Estudos</h1>
+  <h2>Professor Edson da Costa Silva</h2>
   <p>Física • Matemática • Química</p>
-  <p>📍 Maricá - RJ | Aulas para ENEM e Reforço Escolar</p>
-  <p>Aprenda de forma simples e passe no ENEM 🚀</p>
 
-  <a class="btn" href="https://wa.me/5521999622242" target="_blank">
-    📲 Agendar Aula Agora
+  <a class="btn" href="https://wa.me/5521999622242">
+    📲 Tirar dúvida no WhatsApp
   </a>
 </header>
 
-<!-- FOTO -->
-<div style="margin-top:-50px; text-align:center;">
-  <img src="https://via.placeholder.com/150"
-       style="width:150px; border-radius:50%; border:4px solid #22c55e; box-shadow:0 0 20px rgba(0,0,0,0.6);">
-</div>
-
 <section class="section">
-  <h2>📚 Aulas</h2>
+  <h2>📚 Conteúdos</h2>
 
   <div class="cards">
     <div class="card">
-      <h3>Reforço Escolar</h3>
-      <p>Ensino fundamental e médio com explicação simples e prática.</p>
+      <h3>Física</h3>
+      <p>Movimento uniforme, força, energia</p>
     </div>
 
     <div class="card">
-      <h3>ENEM e Vestibulares</h3>
-      <p>Foco em exercícios e estratégias para aprovação.</p>
+      <h3>Matemática</h3>
+      <p>Funções, equações, gráficos</p>
     </div>
 
     <div class="card">
-      <h3>Aulas Personalizadas</h3>
-      <p>Plano de estudo individual conforme sua dificuldade.</p>
+      <h3>Química</h3>
+      <p>Átomo, ligações, transformações</p>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <h2>🚀 Diferenciais</h2>
+  <h2>🧠 Exercícios Resolvidos</h2>
 
-  <div class="cards">
-    <div class="card">
-      <p>✔ Explicação simples (sem complicação)</p>
-    </div>
-
-    <div class="card">
-      <p>✔ Método focado em exercícios</p>
-    </div>
-
-    <div class="card">
-      <p>✔ Conteúdos com mapas mentais e dicas práticas</p>
-    </div>
+  <div class="exercise">
+    <p><b>1.</b> Um carro anda a 20 m/s por 10s. Qual a distância?</p>
+    <button onclick="mostrarResposta('r1')">Ver resposta</button>
+    <p id="r1" style="display:none;">Distância = 20 × 10 = 200 metros</p>
   </div>
-</section>
 
-<section class="section">
-  <h2>📘 Conteúdos Gratuitos</h2>
-
-  <div class="cards">
-    <div class="card">
-      <p>✔ Exercícios resolvidos</p>
-    </div>
-
-    <div class="card">
-      <p>✔ Dicas para o ENEM</p>
-    </div>
-
-    <div class="card">
-      <p>✔ Resumos de Física e Matemática</p>
-    </div>
+  <div class="exercise">
+    <p><b>2.</b> Resolva: 2x + 4 = 10</p>
+    <button onclick="mostrarResposta('r2')">Ver resposta</button>
+    <p id="r2" style="display:none;">2x = 6 → x = 3</p>
   </div>
+
 </section>
 
 <section class="section">
-  <h2>👨‍🏫 Sobre o Professor</h2>
-  <p>
-    Professor Edson da Costa Silva, atuando no ensino de Física, Matemática e Química,
-    com foco em aprovação no ENEM e reforço escolar.
-  </p>
-</section>
-
-<section class="section">
-  <h2>📞 Contato</h2>
-  <p>WhatsApp: (21) 99962-2242</p>
+  <h2>🚀 Evolua nos estudos</h2>
+  <p>Estude teoria + pratique exercícios + tire dúvidas direto comigo.</p>
 
   <a class="btn" href="https://wa.me/5521999622242">
-    Falar Agora
+    Começar agora
   </a>
 </section>
-
-<footer>
-  <p>© 2026 Professor Edson da Costa Silva</p>
-</footer>
 
 </body>
 </html>
