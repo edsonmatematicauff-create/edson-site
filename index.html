@@ -23,6 +23,7 @@ display:flex;
 justify-content:center;
 gap:30px;
 z-index:10;
+flex-wrap:wrap;
 }
 
 .nav a{
@@ -119,12 +120,13 @@ transform:translateY(-10px);
 
 .card button{
 margin-top:10px;
-padding:10px;
+padding:14px;
 border:none;
 background:white;
 color:black;
 border-radius:6px;
 cursor:pointer;
+font-size:16px;
 }
 
 /* FRASE */
@@ -172,10 +174,6 @@ background:#020617;
 flex-wrap:wrap;
 }
 
-.mnu img{
-width:120px;
-}
-
 /* CONTATO */
 .contato{
 padding:60px;
@@ -195,6 +193,64 @@ padding:15px;
 border-radius:50%;
 text-decoration:none;
 z-index:999;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+padding:40px 20px;
+height:auto;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.hero-text{
+max-width:100%;
+}
+
+.quote{
+margin-top:20px;
+max-width:100%;
+}
+
+.nav{
+gap:10px;
+font-size:14px;
+}
+
+.cards{
+padding:20px;
+}
+
+.card{
+width:100%;
+max-width:300px;
+}
+
+.depo-card{
+width:100%;
+}
+
+.mnu{
+flex-direction:column;
+text-align:center;
+}
+
+.contato{
+padding:30px 20px;
+}
+
+.btn{
+display:block;
+width:100%;
+text-align:center;
+}
+
 }
 
 </style>
@@ -320,3 +376,6 @@ Falar no WhatsApp
 
 </body>
 </html>
+
+
+
